@@ -1,0 +1,16 @@
+ - Support FreeBSD (as of now, the FBSD-related classes in target are just a sketch).
+
+ - Better build system.
+
+ - Remove throw() specifications?
+
+ - use atomic<long> instead of libatomic 
+
+ - use std::shared_ptr and std::make_shared instead of boost::shared_ptr
+
+ - replace ext::hash_map with std::unordered_map
+
+ - replace auto_ptr uses with unique_ptr
+
+
+

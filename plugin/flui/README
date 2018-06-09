@@ -1,0 +1,22 @@
+This is a new, experimental project.
+
+I am writing a new UI based on Fltk, with the following goals:
+
+1) Lightweight, minimize dependencies; make it easier to build
+   executables that work across several Linux distros. Right now gtkmm et. all
+   creates quite a heck of a DLL hell.
+
+2) Clean, simple design. There are potential dead-locks in the current UI code
+   (which has evolved organically and is bloated). The current UI also
+   carries lots of gtkmm-1.2 baggage/garbage from back in the day.
+
+   There's a lot of gunk around "marshalling" requests and responses between
+   the main debugger thread and the UI thread. The code is unnecessarily complicated
+   and involves too many mutexes (i.e. more than ONE)
+
+3) Delay toolkit-related design decisions for as long as possible.
+   The "ui" namespace contains code that is not Fltk (or any other toolkit) specific.
+
+   Code in the global namespace is Fltk specific.
+
+
